@@ -1,0 +1,8 @@
+[alias]
+lint = "clippy --locked --workspace --all-targets --all-features -- -D warnings"
+test-all = "test --locked --workspace --all-features"
+docs = "doc --locked --workspace --all-features --no-deps"
+coverage = "llvm-cov --locked --workspace --all-features --fail-under-lines 100"
+
+[build]
+rustdocflags = ["-D", "warnings"]

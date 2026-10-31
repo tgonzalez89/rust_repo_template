@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CLI",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin",
+          "project-name"
+        ],
+        "filter": {
+          "name": "project-name",
+          "kind": "bin"
+        }
+      },
+      "args": [
+        "Rust"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug library integration tests",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test",
+          "greeting"
+        ],
+        "filter": {
+          "name": "greeting",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

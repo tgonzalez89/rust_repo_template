@@ -1,0 +1,22 @@
+{
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.check.allTargets": true,
+  "rust-analyzer.cargo.features": "all",
+  "editor.rulers": [
+    100
+  ],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "files.watcherExclude": {
+    "**/target/**": true
+  },
+  "search.exclude": {
+    "**/target": true,
+    "**/coverage": true
+  }
+}
